@@ -1,0 +1,9 @@
+CROSS_HOST="i686-w64-mingw32"
+ORIG_PN="physfs"
+inherit cross cmake
+
+DESCRIPTION="libphysfs for MinGW-w64 Win32 toolchain"
+HOMEPAGE="http://www.icculus.org/physfs/"
+SRC_URI="http://icculus.org/physfs/downloads/${ORIG_PN}-${PV}.tar.gz"
+
+CYGCMAKE_ARGS="-DPHYSFS_BUILD_TEST=FALSE -DPHYSFS_BUILD_WX_TEST=FALSE"
